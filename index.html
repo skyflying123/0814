@@ -68,7 +68,7 @@
     </div>
 </div>
 
-<iframe id="contentIframe" src="./page1/index.html" frameborder="0"></iframe>
+<iframe id="contentIframe" src="./page0/index.html" frameborder="0"></iframe>
 <div style="pointer-events: none;" class="liker">
     <div>
         <canvas class="hearts-canvas" width="200" height="400"></canvas>
@@ -91,11 +91,14 @@
 <script src="./index.js"></script>
 
 <script>
-    var num = 1;
+    var num = 0;
     $('.like2').click(function () {
         num++
 
-        if(num===2){
+        if(num===1){
+            // $("#audioId").attr('src','./music/追梦人.mp3')
+            $("#audioId").attr('src','./music/起风了.mp3')
+        }else if(num===2){
             // $("#audioId").attr('src','./music/追梦人.mp3')
 			$("#audioId").attr('src','./music/终于等到你.mp3')
         }else if(num===3){
@@ -144,6 +147,53 @@
             audioPlay.play()
             $('.passBox').fadeOut()
         }
+        num++
+
+        if(num===1){
+            // $("#audioId").attr('src','./music/追梦人.mp3')
+            $("#audioId").attr('src','./music/起风了.mp3')
+        }else if(num===2){
+            // $("#audioId").attr('src','./music/追梦人.mp3')
+            $("#audioId").attr('src','./music/终于等到你.mp3')
+        }else if(num===3){
+            // $("#audioId").attr('src','./music/醒不来的梦.mp3')
+            $("#audioId").attr('src','./music/终于等到你.mp3')
+            $("#audioId").attr('src','./music/11.mp3');
+            $("#like2Id").hide();
+        }
+        else if(num===4){
+            $("#audioId").attr('src','./music/11.mp3');
+            $("#like2Id").hide();
+        }
+        else if(num===5){
+            $("#audioId").attr('src','./music/我可以.mp3')
+        }
+        else if(num===6){
+            $("#audioId").attr('src','./music/一次就好.mp3')
+        }
+        else if(num===7){
+            $("#audioId").attr('src','./music/初雪.mp3')
+        }
+        else if(num===8){
+            $("#audioId").attr('src','./music/起风了.mp3')
+        }
+        else if(num===9){
+            $("#audioId").attr('src','./music/光年之外.mp3')
+        }
+        else if(num===10){
+            $("#audioId").attr('src','./music/纸短情长.mp3')
+        }
+        else if(num===11){
+            $("#audioId").attr('src','./music/11.mp3')
+        }
+        else if(num===12){
+            $("#audioId").attr('src','./music/终于等到你.mp3')
+        }
+        else if(num===13){
+            $("#audioId").attr('src','./music/11.mp3')
+        }
+
+        $('#contentIframe').attr('src', './page' + num + '/index.html')
 
     })
 
