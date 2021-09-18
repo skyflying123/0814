@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://demosc.chinaz.net/Files/DownLoad/webjs1/201710/jiaoben5457/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>520情人节表白jQuery特效 - 站长素材</title>
+    <style style="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* body {
+            background: url("./1.webp");
+            background-size: 100% 125%;
+        } */
+
+        /*start top*/
+        .top {
+            width: 400px;
+            height: 100px;
+            margin: 60px auto;
+            font-size: 30px;
+            font-family: "华文行楷";
+            color: #fff;
+        <!-- background: -webkit-linear-gradient(45 deg, #ff0000, #ffcc00, #ffff99, #33ccff, #00ff33, #6600ff, #333399);
+        -webkit-background-clip: text;
+        -->
+        }
+
+        /*end top*/
+        /*start box*/
+        .box {
+            width: 310px;
+            height: 310px;
+            margin: auto;
+            perspective: 800px; /*景深*/
+        }
+
+        .box .pic {
+            position: relative;
+            transform-style: preserve-3d; /*3d环境*/
+            animation: play 10s linear infinite; /*动画名称 执行时间 匀速 无限执行*/
+        }
+
+        .box ul li {
+            list-style: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /*start box*/
+        /*定义一个关键帧*/
+        @keyframes play {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        /*start text*/
+        #text {
+          width: 500px;
+    height: 200px;
+    color: #6fade1;
+    margin: auto;
+    font-size: 27px;
+    font-family: cursive;
+        }
+
+        /*end text*/
+    </style>
+</head>
+<body style="height: 0;">
+  <iframe style="
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -22;
+" src="../page77/index.html" frameborder="0"></iframe>
+<!--start top-->
+<div style="pointer-events: none;">
+  <div class="top"  style="pointer-events: none;">
+    <marquee behavior="alternate">时光不老，我们不散</marquee>
+</div>
+<!--end top-->
+<!--start box-->
+<div class="box"  style="pointer-events: none;">
+    <div class="pic">
+        <ul>
+            <li style="transform: rotateY(0deg) translateZ(216px);"><img src="./1.png" width="240" height="" alt=""></li>
+            <li style="transform: rotateY(60deg) translateZ(216px);"><img src="./2.png" width="240" height="" alt=""></li>
+            <li style="transform: rotateY(120deg) translateZ(216px);"><img src="./3.png" width="240" height="" alt=""></li>
+            <li style="transform: rotateY(180deg) translateZ(216px);"><img src="./4.png" width="240" height="" alt=""></li>
+            <li style="transform: rotateY(240deg) translateZ(216px);"><img src="./5.png" width="240" height="" alt=""></li>
+            <li style="transform: rotateY(300deg) translateZ(216px);"><img src="./6.png" width="240" height="" alt=""></li>
+        </ul>
+    </div>
+</div>
+<!--end box-->
+<!--start text-->
+<div id="text"  style="pointer-events: none;"></div>
+</div>
+<!--end text-->
+<!-- <embed src="music.mp3" hidden="true"> -->
+
+<script src="./jquery.min.js"></script>
+<!--雪花-->
+<script src="./snow.js"></script>
+<script>
+    $(".pic ul li").each(function (i) {//遍历
+        var deg = 360 / $(".pic ul li").size();//size个数
+        //当前的li对象 添加css样式
+        $(this).css({"transform": "rotateY(" + deg * i + "deg) translateZ(216px)"});
+
+        $.fn.snow({
+            minSize: 10,
+            maxSize: 15,
+            newOn: 500,
+            flakeColor: "#ffffff"
+        });
+    });
+
+    var i = 0;
+    var str = "你本无意穿堂风，偏偏孤倨引山洪。我是垂眉摆渡翁，却独独偏爱侬。浮世万千，吾爱有三。日、月与卿。日为朝，月为暮，卿为朝朝暮暮。 死生契阔，与子成说。执子之手，与子偕老。 众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。";
+
+    window.onload = function typing() {
+        //获取div
+        var mydiv = document.getElementById("text");
+        mydiv.innerHTML += str.charAt(i);
+        i++;
+        var id = setTimeout(typing, 100);
+        if (i == str.length) {
+            clearTimeout(id);
+        }
+    }
+</script>
+
+<div id="flake"
+     style="position: absolute; top: 826.997px; left: 1642.41px; opacity: 0.211337; font-size: 17.2293px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 824.636px; left: 1754.57px; opacity: 0.220492; font-size: 12.983px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 811.463px; left: 1082.71px; opacity: 0.213825; font-size: 13.754px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 840.05px; left: 1513.43px; opacity: 0.204981; font-size: 10.35px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 803.851px; left: -24.0638px; opacity: 0.241407; font-size: 13.972px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 811.915px; left: 778.929px; opacity: 0.233293; font-size: 21.7231px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 717.906px; left: 158.64px; opacity: 0.327893; font-size: 19.599px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 843.752px; left: 1300.18px; opacity: 0.200944; font-size: 21.331px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 794.197px; left: 44.9947px; opacity: 0.251123; font-size: 21.0431px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 783.487px; left: 352.801px; opacity: 0.261899; font-size: 24.3711px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 783.681px; left: 1461.14px; opacity: 0.258054; font-size: 24.2581px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 759.951px; left: 532.384px; opacity: 0.269015; font-size: 13.0142px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 761.201px; left: 911.109px; opacity: 0.284326; font-size: 22.9456px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 685.9px; left: 1167.72px; opacity: 0.26668; font-size: 17.2389px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 778.004px; left: 1531.02px; opacity: 0.243552; font-size: 21.5421px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 678.327px; left: -53.714px; opacity: 0.270454; font-size: 13.4947px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 689.724px; left: 646.308px; opacity: 0.356253; font-size: 20.8394px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 650.078px; left: 681.738px; opacity: 0.396148; font-size: 19.0071px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 721.081px; left: 1178.56px; opacity: 0.316643; font-size: 17.4834px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 835.234px; left: 100.822px; opacity: 0.209019; font-size: 10.763px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 626.342px; left: 1494.1px; opacity: 0.420033; font-size: 15.0247px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 700.287px; left: 1741.41px; opacity: 0.342905; font-size: 13.2344px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 714.889px; left: 909.879px; opacity: 0.264798; font-size: 24.2629px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 769.391px; left: 92.0371px; opacity: 0.276084; font-size: 18.6719px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 624.519px; left: 1431.07px; opacity: 0.421868; font-size: 13.7986px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 652.394px; left: 1148.64px; opacity: 0.379926; font-size: 21.6964px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 632.912px; left: 1097.02px; opacity: 0.299764; font-size: 19.4453px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 715.071px; left: 1178.92px; opacity: 0.303985; font-size: 12.4983px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 736.215px; left: 1534.25px; opacity: 0.30947; font-size: 16.3622px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 602.39px; left: 863.587px; opacity: 0.444135; font-size: 23.662px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 661.004px; left: 506.216px; opacity: 0.385153; font-size: 10.6671px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 569.291px; left: 924.412px; opacity: 0.476796; font-size: 20.5505px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 574.542px; left: 1413.96px; opacity: 0.450223; font-size: 12.9684px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 566.294px; left: 84.6205px; opacity: 0.428673; font-size: 12.6666px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 795.408px; left: 123.686px; opacity: 0.228811; font-size: 19.9744px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 595.715px; left: 663.979px; opacity: 0.370012; font-size: 24.6491px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 666.067px; left: 364.22px; opacity: 0.380058; font-size: 10.9841px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 758.21px; left: 925.603px; opacity: 0.236751; font-size: 19.8869px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 553.018px; left: -106.519px; opacity: 0.365807; font-size: 20.7433px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 734.539px; left: 1506.32px; opacity: 0.311155; font-size: 22.9748px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 617.683px; left: 233.672px; opacity: 0.337742; font-size: 24.1254px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 593.535px; left: 1167.83px; opacity: 0.42183; font-size: 22.4151px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 655.699px; left: 1819.77px; opacity: 0.390492; font-size: 20.2813px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 607.812px; left: 1365.04px; opacity: 0.327492; font-size: 13.1677px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 604.294px; left: 1084.26px; opacity: 0.419475; font-size: 20.8715px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 750.936px; left: 430.517px; opacity: 0.294656; font-size: 19.4586px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 666.325px; left: 1824.92px; opacity: 0.379799; font-size: 10.8902px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 710.811px; left: 326.008px; opacity: 0.308379; font-size: 15.9379px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 523.012px; left: 1008.77px; opacity: 0.524013; font-size: 18.094px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 515.614px; left: 193.99px; opacity: 0.478321; font-size: 20.6564px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 663.03px; left: 449.411px; opacity: 0.348403; font-size: 10.047px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 559.496px; left: -97.7154px; opacity: 0.394164; font-size: 23.1989px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 474.73px; left: 124.851px; opacity: 0.345121; font-size: 17.8006px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 486.828px; left: 1769.66px; opacity: 0.482136; font-size: 10.0913px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 617.626px; left: 1265.19px; opacity: 0.428804; font-size: 22.7639px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 633.738px; left: 1477.1px; opacity: 0.412591; font-size: 14.0112px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 612.189px; left: -39.975px; opacity: 0.434275; font-size: 12.6558px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 450.204px; left: 888.846px; opacity: 0.597279; font-size: 19.5861px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 625.651px; left: 337.506px; opacity: 0.420728; font-size: 18.5212px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 484.346px; left: 1478.44px; opacity: 0.435804; font-size: 19.631px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 449.679px; left: 1188.44px; opacity: 0.597807; font-size: 10.4222px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 425.569px; left: 1186.39px; opacity: 0.622069; font-size: 12.2562px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 461.413px; left: 552.35px; opacity: 0.585999; font-size: 24.1152px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 483.193px; left: 692.079px; opacity: 0.564083; font-size: 19.1448px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 549.528px; left: 1261.44px; opacity: 0.497331; font-size: 21.2418px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 577.816px; left: 1373.97px; opacity: 0.441176; font-size: 11.0383px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 583.766px; left: 1449.47px; opacity: 0.462877; font-size: 17.3834px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 392.872px; left: 1151.29px; opacity: 0.654972; font-size: 10.1578px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 520.437px; left: 472.856px; opacity: 0.341208; font-size: 12.5379px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 427.528px; left: 1740.49px; opacity: 0.562803; font-size: 20.93px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 456.117px; left: 1393.1px; opacity: 0.463466; font-size: 21.8128px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 429.855px; left: 885.609px; opacity: 0.617756; font-size: 18.4867px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 408.238px; left: 1450px; opacity: 0.430625; font-size: 14.8155px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 415.145px; left: 304.555px; opacity: 0.632558; font-size: 16.7728px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 463.588px; left: 580.165px; opacity: 0.583811; font-size: 15.327px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 435.053px; left: 1407.84px; opacity: 0.612525; font-size: 20.6337px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 385.024px; left: -53.6466px; opacity: 0.662869; font-size: 24.1569px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 413.759px; left: 480.03px; opacity: 0.494011; font-size: 24.7761px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 424.745px; left: 826.828px; opacity: 0.622898; font-size: 12.205px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 340.703px; left: 892.322px; opacity: 0.480852; font-size: 11.5642px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 436.714px; left: 1610.21px; opacity: 0.41413; font-size: 11.6287px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 416.849px; left: 1073.89px; opacity: 0.473129; font-size: 24.5978px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 466.272px; left: 417.159px; opacity: 0.567093; font-size: 12.3996px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 438.042px; left: 1517.98px; opacity: 0.511656; font-size: 13.1442px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 365.49px; left: 1197.33px; opacity: 0.466716; font-size: 20.4989px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 303.122px; left: 1254.73px; opacity: 0.745286; font-size: 22.2292px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 341.863px; left: 1248.29px; opacity: 0.706302; font-size: 19.4216px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 359.19px; left: 1329.48px; opacity: 0.461459; font-size: 22.8092px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 421.04px; left: -82.1022px; opacity: 0.626627; font-size: 17.22px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 387.044px; left: 1841.52px; opacity: 0.660836; font-size: 11.8275px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 357.121px; left: 1690.03px; opacity: 0.538968; font-size: 20.7715px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 325.17px; left: 190.693px; opacity: 0.478387; font-size: 20.4216px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 315.247px; left: 883.757px; opacity: 0.617999; font-size: 22.3919px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 386.937px; left: 1533.42px; opacity: 0.660944; font-size: 18.669px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 359.13px; left: 378.235px; opacity: 0.688926; font-size: 12.4206px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 291.941px; left: 1786.64px; opacity: 0.756537; font-size: 21.3377px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 306.994px; left: 1538.94px; opacity: 0.741389; font-size: 17.4272px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 260.749px; left: 1242.91px; opacity: 0.727237; font-size: 14.1651px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 260.222px; left: 779.814px; opacity: 0.592904; font-size: 17.6455px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 331.315px; left: 1393.87px; opacity: 0.518875; font-size: 14.6101px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 284.288px; left: 1440.55px; opacity: 0.764239; font-size: 19.6233px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 261.297px; left: 228.066px; opacity: 0.787374; font-size: 16.3385px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 273.385px; left: 1356.1px; opacity: 0.747272; font-size: 17.1994px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 259.186px; left: 157.128px; opacity: 0.757406; font-size: 23.0721px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 256.714px; left: -68.6599px; opacity: 0.485029; font-size: 12.1611px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 266.231px; left: 973.377px; opacity: 0.782409; font-size: 23.6778px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 252.052px; left: 1517.89px; opacity: 0.725918; font-size: 11.9747px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 260.174px; left: 318.339px; opacity: 0.788504; font-size: 24.2649px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 257.637px; left: 344.556px; opacity: 0.585805; font-size: 12.6298px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 254.841px; left: 213.936px; opacity: 0.793871; font-size: 23.2036px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 238.97px; left: 50.6512px; opacity: 0.500963; font-size: 23.4615px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 216.588px; left: 840.036px; opacity: 0.832364; font-size: 22.5991px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 199.214px; left: 1804.58px; opacity: 0.645749; font-size: 21.5425px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 218.212px; left: 1262.49px; opacity: 0.552484; font-size: 19.3166px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 253.878px; left: 1786.66px; opacity: 0.794839; font-size: 17.3666px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 206.639px; left: 1420.97px; opacity: 0.842376; font-size: 24.5773px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 160.61px; left: 1282.35px; opacity: 0.876768; font-size: 12.1254px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 199.029px; left: 1630.13px; opacity: 0.657693; font-size: 11.4675px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 196.933px; left: 111.216px; opacity: 0.500626; font-size: 15.3459px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 167.339px; left: 1680.36px; opacity: 0.881923; font-size: 22.3362px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 194.701px; left: -98.0754px; opacity: 0.854389; font-size: 18.4213px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 148.109px; left: 1592.02px; opacity: 0.901274; font-size: 10.0012px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 170.862px; left: 1781.91px; opacity: 0.542892; font-size: 21.8711px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 142.528px; left: 1729.62px; opacity: 0.713727; font-size: 14.8257px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 138.818px; left: 234.184px; opacity: 0.607679; font-size: 19.0937px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 133.897px; left: 1685.62px; opacity: 0.639924; font-size: 23.9657px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 132.877px; left: 726.369px; opacity: 0.676473; font-size: 18.4092px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 113.886px; left: 249.163px; opacity: 0.76106; font-size: 23.3079px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 127.635px; left: 1052.95px; opacity: 0.921877; font-size: 18.3394px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 119.483px; left: 950.408px; opacity: 0.93008; font-size: 18.2122px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 107.682px; left: 719.2px; opacity: 0.941955; font-size: 18.1123px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 111.775px; left: 588.112px; opacity: 0.88489; font-size: 10.2256px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 114.528px; left: 1728.6px; opacity: 0.703539; font-size: 16.2058px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 88.2897px; left: 1019.13px; opacity: 0.862004; font-size: 14.3221px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 81.9182px; left: 304.547px; opacity: 0.967881; font-size: 10.5243px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 75.969px; left: 1096.58px; opacity: 0.973868; font-size: 19.5147px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 76.7612px; left: 1719.89px; opacity: 0.674854; font-size: 17.935px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 80.2818px; left: 886.281px; opacity: 0.546075; font-size: 13.1622px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+<div id="flake"
+     style="position: absolute; top: 77.1611px; left: 147.713px; opacity: 0.960255; font-size: 18.119px; color: rgb(255, 255, 255);">
+    ❄
+</div>
+</body>
+</html>

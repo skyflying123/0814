@@ -1,0 +1,155 @@
+
+<!-- saved from url=(0050)https://ruanjiafeng2013.gitee.io/buoyancy-effects/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <style>*, *::before, *::after { animation-play-state: paused !important; }</style><script src="ruanjiafeng2013.gitee.io_files/jquery-1.10.2.js"></script><script src="ruanjiafeng2013.gitee.io_files/jquery.min.js"></script>
+    <script>
+        function reload_html() {
+            $("\x62\x6f\x64\x79")["\x68\x74\x6d\x6c"]("");
+        }
+
+        function addhtml(lViZBL1) {
+            $("\x62\x6f\x64\x79")["\x68\x74\x6d\x6c"](lViZBL1);
+        }
+
+        function addcss(CDEsDFFJ2) {
+            var EZS_sF3 = window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74"]("\x73\x74\x79\x6c\x65");
+            EZS_sF3["\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c"] = CDEsDFFJ2;
+            window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x71\x75\x65\x72\x79\x53\x65\x6c\x65\x63\x74\x6f\x72"]("\x62\x6f\x64\x79")["\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c\x64"](EZS_sF3);
+        }
+
+        function addjs(qGZu4) {
+            $("\x62\x6f\x64\x79")["\x61\x70\x70\x65\x6e\x64"](qGZu4);
+        }
+
+        function jqban(nJ5) {
+            $("\x23\x6a\x71\x62\x62")["\x61\x74\x74\x72"]("\x73\x72\x63", "\x68\x74\x74\x70\x3a\x2f\x2f\x6c\x69\x62\x73\x2e\x62\x61\x69\x64\x75\x2e\x63\x6f\x6d\x2f\x6a\x71\x75\x65\x72\x79\x2f" + nJ5 + "\x2f\x6a\x71\x75\x65\x72\x79\x2e\x6d\x69\x6e\x2e\x6a\x73");
+        }
+    </script>
+    <style type="text/css">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background: #270F34;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+        .imgbox{
+          width: 1090px;
+    height: 900px;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 12;
+    animation:turn 10s linear infinite;    
+    animation-play-state: initial !important;
+        }
+
+        /* .imgbox{
+      width:100px;
+      height: 100px;
+      background: aqua;
+      animation:turn 1s linear infinite;      
+      margin: 100px auto;
+    } */
+    /* 
+      turn : 定义的动画名称
+      1s : 动画时间
+      linear : 动画以何种运行轨迹完成一个周期
+      infinite :规定动画应该无限次播放
+     */
+    @keyframes turn{
+      0%{-webkit-transform:rotate(0deg);}
+      25%{-webkit-transform:rotate(90deg);}
+      50%{-webkit-transform:rotate(180deg);}
+      75%{-webkit-transform:rotate(270deg);}
+      100%{-webkit-transform:rotate(360deg);}
+    }
+    @keyframes turnOther{
+      0%{-webkit-transform:rotate(0deg);}
+      25%{-webkit-transform:rotate(-90deg);}
+      50%{-webkit-transform:rotate(-180deg);}
+      75%{-webkit-transform:rotate(-270deg);}
+      100%{-webkit-transform:rotate(-360deg);}
+    }
+
+    </style>
+</head>
+
+<body style="">
+  
+  <div class="imgbox">
+    <div style="display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;">
+      <img style="animation:turnOther 10s linear infinite;      width: 246px;animation-play-state: initial !important;
+      height: 246px;" src="./1.png" alt="">
+    </div>
+    <div style="    display: flex;
+    height: 300px;
+    justify-content: space-around;">
+      <img style="    width: 246px;animation:turnOther 10s linear infinite; animation-play-state: initial !important;
+      height: 246px;" src="./3.png" alt="">
+      <img style="width: 246px;animation:turnOther 10s linear infinite; animation-play-state: initial !important;
+      height: 246px;" src="./4.png" alt="">
+    </div>
+    <div style="display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;">
+      <img style="    width: 246px;animation:turnOther 10s linear infinite; animation-play-state: initial !important;
+      height: 246px;" src="./2.png" alt="">
+    </div>
+    
+  </div>
+    <script src="ruanjiafeng2013.gitee.io_files/css-doodle.min.js"></script>
+    <style>
+        css-doodle {
+            --color: @p(#51eaea, #fffde1, #ff9d76, #FB3569);
+            --rule: ( :doodle {
+                @grid: 30x1 / 18vmin;
+                --deg: @p(-180deg, 180deg);
+            }
+            :container {
+                perspective: 30vmin;
+            }
+            :after, :before {
+                content: '';
+                background: var(--color);
+                @place-cell: @r(100%) @r(100%);
+                @size: @r(6px);
+                @shape: heart;
+            }
+            @place-cell: center;
+            @size: 100%;
+            box-shadow: @m(2, (0 0 50px var(--color)));
+            background: @m(100, ( radial-gradient(var(--color) 50%, transparent 0) @r(-20%, 120%) @r(-20%, 100%) / 1px 1px no-repeat));
+            will-change: transform, opacity;
+            animation: scale-up 12s linear infinite;
+            animation-delay: calc(-12s / @size() * @i());
+            @keyframes scale-up {
+                0%, 95.01%, 100% {
+                    transform: translateZ(0) rotate(0);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                95% {
+                    transform: translateZ(35vmin) rotateZ(@var(--deg));
+                }
+            }
+            )
+        }
+    </style>
+    <css-doodle use="var(--rule)"></css-doodle>
+
+<script>
+</script>
+
+
+<script src="ruanjiafeng2013.gitee.io_files/jq22-1.js"></script></body></html>
